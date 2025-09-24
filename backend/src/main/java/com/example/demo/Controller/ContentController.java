@@ -19,10 +19,10 @@ public class ContentController {
     public String home(){
         return "index";
     }
-    
-    @GetMapping("/landing")
-    public String landing(){
-        return "landing";
+
+    @GetMapping("/text")
+    public String text(){
+        return "text";
     }
     
 }

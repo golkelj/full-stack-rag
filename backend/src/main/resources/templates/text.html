@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Page</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .wide-section { max-width: 1280px; padding: 3rem 4rem; }
+        .output-group { margin: 20px 0; }
+        .output-group label { display: block; margin-bottom: 8px; color: #fff; }
+        .output-box {
+            width: 100%;
+            min-height: 420px;
+            background: transparent;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            color: #fff;
+            padding: 12px;
+            font-size: 1rem;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <section class="wide-section">
+        <form>
+            <h1>Text</h1>
+            <div class="output-group">
+                <label for="textOutput">Response</label>
+                <div id="textOutput" class="output-box">Awaiting response...</div>
+            </div>
+            <button type="button" onclick="window.location.href='/index'">Back</button>
+        </form>
+    </section>
+</body>
+</html>
+

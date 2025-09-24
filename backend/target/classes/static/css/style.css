@@ -12,10 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url(https://user-images.githubusercontent.com/13468728/233847739-219cb494-c265-4554-820a-bd3424c59065.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: #111827; /* dark gray */
 }
 
 section {
@@ -122,3 +119,39 @@ button:hover {
   color: #a8a8a8;
 }
 
+/* Wide container for larger pages */
+.wide-section { width: 90vw; max-width: 1280px; padding: 3rem 4rem; }
+.wide-section form { width: 100%; }
+.wide-section .inputbox { max-width: 100%; }
+
+/* Textarea group styles (index page) */
+.textarea-group { margin: 20px 0; }
+.textarea-group label { display: block; margin-bottom: 8px; color: #fff; }
+.textarea-group textarea {
+  width: 100%;
+  min-height: 260px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  outline: none;
+  resize: vertical;
+}
+
+/* Read-only output styles (text page) */
+.output-group { margin: 20px 0; }
+.output-group label { display: block; margin-bottom: 8px; color: #fff; }
+.output-box {
+  width: 100%;
+  min-height: 420px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}

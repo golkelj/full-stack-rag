@@ -52,7 +52,7 @@ public class SecurityConfig {
             .csrf(AbstractHttpConfigurer::disable)
             .formLogin(httpForm ->{
                 httpForm.loginPage("/req/login").permitAll();
-                httpForm.defaultSuccessUrl("/landing", true);
+                httpForm.defaultSuccessUrl("/index", true);
             })
     
             
