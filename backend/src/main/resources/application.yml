@@ -5,6 +5,8 @@ server:
     include-binding-errors: always
 
 spring:
+  config:
+    import: optional:file:.env[.properties]
   mail:
     host: smtp.gmail.com
     port: 587
@@ -18,9 +20,9 @@ spring:
           starttls:
             enable: true
   datasource:
-    password:
-    url: jdbc:postgresql://localhost:5432/registeration
-    username:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
