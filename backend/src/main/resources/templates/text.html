@@ -36,6 +36,11 @@
             <button type="button" onclick="window.location.href='/index'">Back</button>
         </form>
     </section>
+    <script>
+      const out = document.getElementById('textOutput');
+      const value = sessionStorage.getItem('lastResponse');
+      if (value) { out.textContent = value; }
+    </script>
 </body>
 </html>
 

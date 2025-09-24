@@ -11,7 +11,7 @@
 </head>
 <body>
     <section class="wide-section">
-        <form>
+        <form id="mainForm">
             <h1>Welcome</h1>
             <div class="textarea-group">
                 <label for="textBlock">Enter Text</label>
@@ -22,8 +22,28 @@
                 <input type="text" id="secondaryInput" required>
                 <label for="secondaryInput">Text Question Input</label>
             </div>
-            <button type="button" onclick="window.location.href='/text'">Submit</button>
+            <button type="submit">Submit</button>
         </form>
     </section>
+    <script>
+      const form = document.getElementById('mainForm');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const primary = document.getElementById('textBlock').value;
+        const question = document.getElementById('secondaryInput').value;
+        try {
+          const resp = await fetch('/api/process', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ primary, question })
+          });
+          const text = await resp.text();
+          sessionStorage.setItem('lastResponse', text);
+          window.location.href = '/text';
+        } catch (err) {
+          alert('Failed to contact service');
+        }
+      });
+    </script>
 </body>
 </html>
